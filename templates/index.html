@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Academy — Formación Odontológica de Excelencia</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="/" class="nav__logo" aria-label="Dental Academy - Inicio">
+                <svg class="nav__logo-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                    <circle cx="18" cy="18" r="17" stroke="currentColor" stroke-width="2"/>
+                    <path d="M18 8c-3 0-5.5 2-5.5 5.5 0 3 2.5 5 3.5 9 .5 2 .5 4.5 2 4.5s1.5-2.5 2-4.5c1-4 3.5-6 3.5-9C23.5 10 21 8 18 8z" fill="currentColor"/>
+                </svg>
+                <span>Dental<span class="nav__logo-accent">Academy</span></span>
+            </a>
+            <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" id="nav-toggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="/" role="menuitem" class="nav__link nav__link--active">Inicio</a></li>
+                <li role="none"><a href="/courses" role="menuitem" class="nav__link">Cursos</a></li>
+                <li role="none"><a href="/#about" role="menuitem" class="nav__link">Nosotros</a></li>
+                <li role="none"><a href="/#instructors" role="menuitem" class="nav__link">Instructores</a></li>
+                <li role="none"><a href="/contact" role="menuitem" class="nav__link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero__bg">
+                <div class="hero__gradient"></div>
+                <div class="hero__pattern" aria-hidden="true"></div>
+            </div>
+            <div class="hero__content container">
+                <span class="hero__badge">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/></svg>
+                    Inscripciones Abiertas 2026
+                </span>
+                <h1 id="hero-title" class="hero__title">
+                    Formación Odontológica<br>
+                    <span class="hero__title-accent">de Excelencia</span>
+                </h1>
+                <p class="hero__subtitle">Cursos especializados diseñados por expertos para llevar tu práctica clínica al siguiente nivel. Aprende las técnicas más avanzadas en implantología, endodoncia, ortodoncia y más.</p>
+                <div class="hero__actions">
+                    <a href="/courses" class="btn btn--primary btn--lg">
+                        Explorar Cursos
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#courses-preview" class="btn btn--outline btn--lg">Ver Programas</a>
+                </div>
+                <div class="hero__stats">
+                    <div class="hero__stat">
+                        <span class="hero__stat-number" data-count="500">0</span><span class="hero__stat-suffix">+</span>
+                        <span class="hero__stat-label">Profesionales Formados</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-number" data-count="8">0</span>
+                        <span class="hero__stat-label">Programas Especializados</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-number" data-count="98">0</span><span class="hero__stat-suffix">%</span>
+                        <span class="hero__stat-label">Satisfacción</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses-preview" id="courses-preview" aria-labelledby="courses-preview-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Programas Destacados</span>
+                    <h2 id="courses-preview-title" class="section-title">Cursos que Transforman<br>tu Práctica Clínica</h2>
+                    <p class="section-desc">Elige entre programas de formación extensa y workshops intensivos diseñados para diferentes niveles de experiencia.</p>
+                </div>
+
+                <div class="courses-tabs" role="tablist" aria-label="Filtrar cursos por duración">
+                    <button class="courses-tabs__btn courses-tabs__btn--active" role="tab" aria-selected="true" data-filter="all">Todos</button>
+                    <button class="courses-tabs__btn" role="tab" aria-selected="false" data-filter="long">Programas Largos</button>
+                    <button class="courses-tabs__btn" role="tab" aria-selected="false" data-filter="short">Cursos Cortos</button>
+                </div>
+
+                <div class="courses-grid" id="courses-grid">
+                    <article class="course-card course-card--long" data-category="long" tabindex="0">
+                        <div class="course-card__image">
+                            <div class="course-card__image-placeholder course-card__image-placeholder--1">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 6c-8 0-14 6-14 14 0 8 6 12 8 20 1 4 1 10 6 10s5-6 6-10c2-8 8-12 8-20 0-8-6-14-14-14z" fill="currentColor" opacity="0.3"/><path d="M24 10c-5.5 0-10 4-10 10 0 5 4 8 5 14 .5 3 .5 7 5 7s4.5-4 5-7c1-6 5-9 5-14 0-6-4.5-10-10-10z" stroke="currentColor" stroke-width="2"/></svg>
+                            </div>
+                            <span class="course-card__badge">6 meses</span>
+                        </div>
+                        <div class="course-card__body">
+                            <div class="course-card__meta">
+                                <span class="course-card__category">Programa Largo</span>
+                                <span class="course-card__rating">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.5 4.5H13l-3.5 2.5 1.5 4.5L7 10l-3.5 2.5L5 8 1.5 5.5H5.5L7 1z"/></svg>
+                                    4.9
+                                </span>
+                            </div>
+                            <h3 class="course-card__title">Implantología Avanzada</h3>
+                            <p class="course-card__desc">Técnicas quirúrgicas y protéticas de vanguardia con planificación digital</p>
+                            <div class="course-card__details">
+                                <span>120 hrs</span>
+                                <span>Presencial + Online</span>
+                            </div>
+                            <div class="course-card__footer">
+                                <span class="course-card__price">$3,500</span>
+                                <a href="/course/implantologia-avanzada" class="btn btn--sm btn--primary">Ver Programa</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="course-card course-card--long" data-category="long" tabindex="0">
+                        <div class="course-card__image">
+                            <div class="course-card__image-placeholder course-card__image-placeholder--2">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="24" cy="24" r="3" fill="currentColor" opacity="0.4"/></svg>
+                            </div>
+                            <span class="course-card__badge">4 meses</span>
+                        </div>
+                        <div class="course-card__body">
+                            <div class="course-card__meta">
+                                <span class="course-card__category">Programa Largo</span>
+                                <span class="course-card__rating">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.5 4.5H13l-3.5 2.5 1.5 4.5L7 10l-3.5 2.5L5 8 1.5 5.5H5.5L7 1z"/></svg>
+                                    4.8
+                                </span>
+                            </div>
+                            <h3 class="course-card__title">Endodoncia Microscópica</h3>
+                            <p class="course-card__desc">Precisión y éxito en tratamientos de conductos con microscopio operatorio</p>
+                            <div class="course-card__details">
+                                <span>80 hrs</span>
+                                <span>Presencial</span>
+                            </div>
+                            <div class="course-card__footer">
+                                <span class="course-card__price">$2,800</span>
+                                <a href="/course/endodoncia-microscopica" class="btn btn--sm btn--primary">Ver Programa</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="course-card course-card--long" data-category="long" tabindex="0">
+                        <div class="course-card__image">
+                            <div class="course-card__image-placeholder course-card__image-placeholder--3">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M10 24h28M14 20h20M14 28h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 24c0-8.8 7.2-16 16-16" stroke="currentColor" stroke-width="2"/><path d="M40 24c0 8.8-7.2 16-16 16" stroke="currentColor" stroke-width="2"/></svg>
+                            </div>
+                            <span class="course-card__badge">5 meses</span>
+                        </div>
+                        <div class="course-card__body">
+                            <div class="course-card__meta">
+                                <span class="course-card__category">Programa Largo</span>
+                                <span class="course-card__rating">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.5 4.5H13l-3.5 2.5 1.5 4.5L7 10l-3.5 2.5L5 8 1.5 5.5H5.5L7 1z"/></svg>
+                                    4.7
+                                </span>
+                            </div>
+                            <h3 class="course-card__title">Ortodoncia Invisible</h3>
+                            <p class="course-card__desc">Alineadores transparentes: diagnóstico y tratamiento digital</p>
+                            <div class="course-card__details">
+                                <span>100 hrs</span>
+                                <span>Híbrida</span>
+                            </div>
+                            <div class="course-card__footer">
+                                <span class="course-card__price">$3,200</span>
+                                <a href="/course/ortodoncia-invisible" class="btn btn--sm btn--primary">Ver Programa</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="course-card course-card--short" data-category="short" tabindex="0">
+                        <div class="course-card__image">
+                            <div class="course-card__image-placeholder course-card__image-placeholder--4">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="8" y="8" width="32" height="24" rx="2" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="20" r="5" stroke="currentColor" stroke-width="2"/><path d="M16 36h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                            <span class="course-card__badge course-card__badge--accent">2 días</span>
+                        </div>
+                        <div class="course-card__body">
+                            <div class="course-card__meta">
+                                <span class="course-card__category course-card__category--accent">Curso Corto</span>
+                                <span class="course-card__rating">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.5 4.5H13l-3.5 2.5 1.5 4.5L7 10l-3.5 2.5L5 8 1.5 5.5H5.5L7 1z"/></svg>
+                                    4.9
+                                </span>
+                            </div>
+                            <h3 class="course-card__title">Fotografía Clínica Dental</h3>
+                            <p class="course-card__desc">Documentación visual profesional para tu práctica</p>
+                            <div class="course-card__details">
+                                <span>16 hrs</span>
+                                <span>Presencial</span>
+                            </div>
+                            <div class="course-card__footer">
+                                <span class="course-card__price">$450</span>
+                                <a href="/course/fotografia-dental" class="btn btn--sm btn--primary">Ver Programa</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="course-card course-card--short" data-category="short" tabindex="0">
+                        <div class="course-card__image">
+                            <div class="course-card__image-placeholder course-card__image-placeholder--5">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 8a12 12 0 0 1 0 32 12 12 0 0 1 0-32z" stroke="currentColor" stroke-width="2"/><path d="M24 14v10l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                            <span class="course-card__badge course-card__badge--accent">1 día</span>
+                        </div>
+                        <div class="course-card__body">
+                            <div class="course-card__meta">
+                                <span class="course-card__category course-card__category--accent">Curso Corto</span>
+                                <span class="course-card__rating">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.5 4.5H13l-3.5 2.5 1.5 4.5L7 10l-3.5 2.5L5 8 1.5 5.5H5.5L7 1z"/></svg>
+                                    4.8
+                                </span>
+                            </div>
+                            <h3 class="course-card__title">Blanqueamiento Avanzado</h3>
+                            <p class="course-card__desc">Técnicas modernas para sonrisas radiantes</p>
+                            <div class="course-card__details">
+                                <span>8 hrs</span>
+                                <span>Presencial</span>
+                            </div>
+                            <div class="course-card__footer">
+                                <span class="course-card__price">$280</span>
+                                <a href="/course/blanqueamiento-avanzado" class="btn btn--sm btn--primary">Ver Programa</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="course-card course-card--short" data-category="short" tabindex="0">
+                        <div class="course-card__image">
+                            <div class="course-card__image-placeholder course-card__image-placeholder--6">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M12 20h24M12 28h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M20 14v20M28 14v20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/></svg>
+                            </div>
+                            <span class="course-card__badge course-card__badge--accent">3 días</span>
+                        </div>
+                        <div class="course-card__body">
+                            <div class="course-card__meta">
+                                <span class="course-card__category course-card__category--accent">Curso Corto</span>
+                                <span class="course-card__rating">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.5 4.5H13l-3.5 2.5 1.5 4.5L7 10l-3.5 2.5L5 8 1.5 5.5H5.5L7 1z"/></svg>
+                                    4.9
+                                </span>
+                            </div>
+                            <h3 class="course-card__title">Carillas Cerámicas</h3>
+                            <p class="course-card__desc">Estética dental con resultados predecibles</p>
+                            <div class="course-card__details">
+                                <span>24 hrs</span>
+                                <span>Presencial</span>
+                            </div>
+                            <div class="course-card__footer">
+                                <span class="course-card__price">$650</span>
+                                <a href="/course/carillas-ceramicas" class="btn btn--sm btn--primary">Ver Programa</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="courses-cta">
+                    <a href="/courses" class="btn btn--primary btn--lg">
+                        Ver Todos los Programas
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about" aria-labelledby="about-title">
+            <div class="container">
+                <div class="about__grid">
+                    <div class="about__content">
+                        <span class="section-tag">Sobre Nosotros</span>
+                        <h2 id="about-title" class="section-title">Más que una Academia,<br>una Comunidad</h2>
+                        <p class="about__text">Somos un centro de formación odontológica comprometido con la excelencia clínica. Nuestros programas combinan teoría de vanguardia con práctica intensiva en entornos clínicos reales.</p>
+                        <div class="about__features">
+                            <div class="about__feature">
+                                <div class="about__feature-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7l3-7z" stroke="currentColor" stroke-width="2"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="about__feature-title">Instructores Certificados</h3>
+                                    <p class="about__feature-desc">Profesionales con más de 15 años de experiencia clínica y docente</p>
+                                </div>
+                            </div>
+                            <div class="about__feature">
+                                <div class="about__feature-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="about__feature-title">Certificación Oficial</h3>
+                                    <p class="about__feature-desc">Diplomas con validez y reconocimiento institucional</p>
+                                </div>
+                            </div>
+                            <div class="about__feature">
+                                <div class="about__feature-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="about__feature-title">Práctica en Clínica</h3>
+                                    <p class="about__feature-desc">Horas de práctica supervisada con pacientes reales</p>
+                                </div>
+                            </div>
+                            <div class="about__feature">
+                                <div class="about__feature-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="about__feature-title">Comunidad Activa</h3>
+                                    <p class="about__feature-desc">Red de egresados con soporte continuo y actualizaciones</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__visual">
+                        <div class="about__card about__card--1">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4c-6 0-10 4-10 10 0 6 4 8 5 14 .5 2 .5 6 5 6s4.5-4 5-6c1-6 5-8 5-14 0-6-4-10-10-10z" stroke="currentColor" stroke-width="2"/></svg>
+                            <span>Experiencia Clínica</span>
+                        </div>
+                        <div class="about__card about__card--2">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 16h20M10 12h12M10 20h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            <span>Formación Continua</span>
+                        </div>
+                        <div class="about__card about__card--3">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="2"/><path d="M16 10v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            <span>Horas Prácticas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="instructors" id="instructors" aria-labelledby="instructors-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Equipo Docente</span>
+                    <h2 id="instructors-title" class="section-title">Instructores de Nivel Mundial</h2>
+                    <p class="section-desc">Nuestro equipo está formado por especialistas reconocidos internacionalmente con amplia trayectoria clínica y académica.</p>
+                </div>
+                <div class="instructors__grid">
+                    <div class="instructor-card">
+                        <div class="instructor-card__avatar instructor-card__avatar--1">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="16" r="8" stroke="currentColor" stroke-width="2"/><path d="M6 36c0-7.7 6.3-14 14-14s14 6.3 14 14" stroke="currentColor" stroke-width="2"/></svg>
+                        </div>
+                        <h3 class="instructor-card__name">Dr. Carlos Mendoza</h3>
+                        <p class="instructor-card__specialty">Implantología</p>
+                        <p class="instructor-card__bio">20+ años de experiencia. Conferencista internacional con más de 50 publicaciones.</p>
+                    </div>
+                    <div class="instructor-card">
+                        <div class="instructor-card__avatar instructor-card__avatar--2">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="16" r="8" stroke="currentColor" stroke-width="2"/><path d="M6 36c0-7.7 6.3-14 14-14s14 6.3 14 14" stroke="currentColor" stroke-width="2"/></svg>
+                        </div>
+                        <h3 class="instructor-card__name">Dra. María Fernanda López</h3>
+                        <p class="instructor-card__specialty">Endodoncia</p>
+                        <p class="instructor-card__bio">Pionera en endodoncia microscópica en la región. Directora de la sociedad de endodoncia.</p>
+                    </div>
+                    <div class="instructor-card">
+                        <div class="instructor-card__avatar instructor-card__avatar--3">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="16" r="8" stroke="currentColor" stroke-width="2"/><path d="M6 36c0-7.7 6.3-14 14-14s14 6.3 14 14" stroke="currentColor" stroke-width="2"/></svg>
+                        </div>
+                        <h3 class="instructor-card__name">Dr. Andrés Villanueva</h3>
+                        <p class="instructor-card__specialty">Ortodoncia Invisible</p>
+                        <p class="instructor-card__bio">Key opinion leader en alineadores. Certificador de sistemas digitales.</p>
+                    </div>
+                    <div class="instructor-card">
+                        <div class="instructor-card__avatar instructor-card__avatar--4">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="16" r="8" stroke="currentColor" stroke-width="2"/><path d="M6 36c0-7.7 6.3-14 14-14s14 6.3 14 14" stroke="currentColor" stroke-width="2"/></svg>
+                        </div>
+                        <h3 class="instructor-card__name">Dra. Ana Lucía Reyes</h3>
+                        <p class="instructor-card__specialty">Estética Dental</p>
+                        <p class="instructor-card__bio">Especialista en carillas cerámicas y diseño de sonrisa. Premio a la excelencia estética 2024.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Testimonios</span>
+                    <h2 id="testimonials-title" class="section-title">Lo que Dicen Nuestros Egresados</h2>
+                </div>
+                <div class="testimonials__grid">
+                    <blockquote class="testimonial-card">
+                        <div class="testimonial-card__stars" aria-label="5 estrellas">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z"/></svg>
+                        </div>
+                        <p class="testimonial-card__text">"El programa de implantología transformó mi práctica. Ahora realizo cirugías que antes refería a otros especialistas. La calidad docente es excepcional."</p>
+                        <footer class="testimonial-card__author">
+                            <div class="testimonial-card__avatar" aria-hidden="true">DR</div>
+                            <div>
+                                <cite class="testimonial-card__name">Dr. Roberto Herrera</cite>
+                                <span class="testimonial-card__role">Egresado — Implantología Avanzada</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+                    <blockquote class="testimonial-card">
+                        <div class="testimonial-card__stars" aria-label="5 estrellas">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z"/></svg>
+                        </div>
+                        <p class="testimonial-card__text">"El workshop de carillas cerámicas fue increíble. En tres días aprendí técnicas que llevaba años queriendo dominar. El enfoque práctico hace toda la diferencia."</p>
+                        <footer class="testimonial-card__author">
+                            <div class="testimonial-card__avatar" aria-hidden="true">AL</div>
+                            <div>
+                                <cite class="testimonial-card__name">Dra. Alejandra Pinto</cite>
+                                <span class="testimonial-card__role">Egresada — Carillas Cerámicas</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+                    <blockquote class="testimonial-card">
+                        <div class="testimonial-card__stars" aria-label="5 estrellas">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z"/></svg>
+                        </div>
+                        <p class="testimonial-card__text">"La endodoncia microscópica me abrió un mundo nuevo. Los casos que antes eran imposibles ahora los resuelvo con confianza. Inversión que vale cada centavo."</p>
+                        <footer class="testimonial-card__author">
+                            <div class="testimonial-card__avatar" aria-hidden="true">MG</div>
+                            <div>
+                                <cite class="testimonial-card__name">Dr. Miguel Gutiérrez</cite>
+                                <span class="testimonial-card__role">Egresado — Endodoncia Microscópica</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-section__content">
+                    <h2 id="cta-title" class="cta-section__title">¿Listo para Llevar tu Práctica<br>al Siguiente Nivel?</h2>
+                    <p class="cta-section__desc">Inscríbete hoy y únete a la comunidad de odontólogos que están transformando su carrera profesional.</p>
+                    <div class="cta-section__actions">
+                        <a href="/courses" class="btn btn--white btn--lg">
+                            Ver Programas
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="/contact" class="btn btn--outline-white btn--lg">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="nav__logo" aria-label="Dental Academy - Inicio">
+                        <svg class="nav__logo-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                            <circle cx="18" cy="18" r="17" stroke="currentColor" stroke-width="2"/>
+                            <path d="M18 8c-3 0-5.5 2-5.5 5.5 0 3 2.5 5 3.5 9 .5 2 .5 4.5 2 4.5s1.5-2.5 2-4.5c1-4 3.5-6 3.5-9C23.5 10 21 8 18 8z" fill="currentColor"/>
+                        </svg>
+                        <span>Dental<span class="nav__logo-accent">Academy</span></span>
+                    </a>
+                    <p class="footer__brand-desc">Formación odontológica de excelencia. Transformando profesionales, mejorando sonrisas.</p>
+                </div>
+                <div class="footer__links">
+                    <h3 class="footer__heading">Programas</h3>
+                    <ul class="footer__list">
+                        <li><a href="/courses">Cursos Largos</a></li>
+                        <li><a href="/courses">Cursos Cortos</a></li>
+                        <li><a href="/courses">Workshops</a></li>
+                        <li><a href="/courses">Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h3 class="footer__heading">Academia</h3>
+                    <ul class="footer__list">
+                        <li><a href="/#about">Nosotros</a></li>
+                        <li><a href="/#instructors">Instructores</a></li>
+                        <li><a href="/contact">Contacto</a></li>
+                        <li><a href="/">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h3 class="footer__heading">Contacto</h3>
+                    <ul class="footer__list">
+                        <li>info@dentalacademy.com</li>
+                        <li>+507 234-5678</li>
+                        <li>Ciudad de Panamá, Panamá</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Dental Academy. Todos los derechos reservados.</p>
+                <div class="footer__bottom-links">
+                    <a href="#">Privacidad</a>
+                    <a href="#">Términos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

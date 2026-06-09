@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto — Dental Academy</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="/" class="nav__logo" aria-label="Dental Academy - Inicio">
+                <svg class="nav__logo-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                    <circle cx="18" cy="18" r="17" stroke="currentColor" stroke-width="2"/>
+                    <path d="M18 8c-3 0-5.5 2-5.5 5.5 0 3 2.5 5 3.5 9 .5 2 .5 4.5 2 4.5s1.5-2.5 2-4.5c1-4 3.5-6 3.5-9C23.5 10 21 8 18 8z" fill="currentColor"/>
+                </svg>
+                <span>Dental<span class="nav__logo-accent">Academy</span></span>
+            </a>
+            <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" id="nav-toggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="/" role="menuitem" class="nav__link">Inicio</a></li>
+                <li role="none"><a href="/courses" role="menuitem" class="nav__link">Cursos</a></li>
+                <li role="none"><a href="/#about" role="menuitem" class="nav__link">Nosotros</a></li>
+                <li role="none"><a href="/#instructors" role="menuitem" class="nav__link">Instructores</a></li>
+                <li role="none"><a href="/contact" role="menuitem" class="nav__link nav__link--active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <span class="section-tag">Contáctanos</span>
+                <h1 class="page-hero__title">Estamos para Ayudarte</h1>
+                <p class="page-hero__desc">¿Tienes preguntas sobre nuestros programas? Escríbenos y te responderemos a la brevedad.</p>
+            </div>
+        </section>
+
+        <section class="contact-section" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="contact__grid">
+                    <div class="contact__info">
+                        <h2 id="contact-title" class="section-title">Información de Contacto</h2>
+                        <div class="contact__info-items">
+                            <div class="contact__info-item">
+                                <div class="contact__info-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2"/></svg>
+                                </div>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p>info@dentalacademy.com</p>
+                                </div>
+                            </div>
+                            <div class="contact__info-item">
+                                <div class="contact__info-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+                                </div>
+                                <div>
+                                    <h3>Teléfono</h3>
+                                    <p>+507 234-5678</p>
+                                </div>
+                            </div>
+                            <div class="contact__info-item">
+                                <div class="contact__info-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+                                </div>
+                                <div>
+                                    <h3>Ubicación</h3>
+                                    <p>Ciudad de Panamá, Panamá</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact__form" id="contact-form" aria-label="Formulario de contacto">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nombre Completo</label>
+                            <input type="text" id="name" name="name" class="form-input" required autocomplete="name" placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" class="form-input" required autocomplete="email" placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" autocomplete="tel" placeholder="+507 000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="course-interest" class="form-label">Curso de Interés</label>
+                            <select id="course-interest" name="course_interest" class="form-input">
+                                <option value="">Selecciona un programa</option>
+                                <option value="implantologia-avanzada">Implantología Avanzada</option>
+                                <option value="endodoncia-microscopica">Endodoncia Microscópica</option>
+                                <option value="ortodoncia-invisible">Ortodoncia Invisible</option>
+                                <option value="fotografia-dental">Fotografía Clínica Dental</option>
+                                <option value="blanqueamiento-avanzado">Blanqueamiento Avanzado</option>
+                                <option value="emergencias-dentales">Emergencias Dentales</option>
+                                <option value="carillas-ceramicas">Carillas Cerámicas</option>
+                                <option value="periodoncia-avanzada">Periodoncia Quirúrgica</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" rows="4" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--lg btn--block">
+                            Enviar Mensaje
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom">
+                <p>&copy; 2026 Dental Academy. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

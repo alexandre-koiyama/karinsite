@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos — Dental Academy</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="/" class="nav__logo" aria-label="Dental Academy - Inicio">
+                <svg class="nav__logo-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                    <circle cx="18" cy="18" r="17" stroke="currentColor" stroke-width="2"/>
+                    <path d="M18 8c-3 0-5.5 2-5.5 5.5 0 3 2.5 5 3.5 9 .5 2 .5 4.5 2 4.5s1.5-2.5 2-4.5c1-4 3.5-6 3.5-9C23.5 10 21 8 18 8z" fill="currentColor"/>
+                </svg>
+                <span>Dental<span class="nav__logo-accent">Academy</span></span>
+            </a>
+            <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" id="nav-toggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="/" role="menuitem" class="nav__link">Inicio</a></li>
+                <li role="none"><a href="/courses" role="menuitem" class="nav__link nav__link--active">Cursos</a></li>
+                <li role="none"><a href="/#about" role="menuitem" class="nav__link">Nosotros</a></li>
+                <li role="none"><a href="/#instructors" role="menuitem" class="nav__link">Instructores</a></li>
+                <li role="none"><a href="/contact" role="menuitem" class="nav__link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <span class="section-tag">Nuestros Programas</span>
+                <h1 class="page-hero__title">Todos los Cursos</h1>
+                <p class="page-hero__desc">Explora nuestra oferta completa de formación. Desde programas de varios meses hasta workshops intensivos de fin de semana.</p>
+            </div>
+        </section>
+
+        <section class="courses-page" aria-labelledby="courses-title">
+            <div class="container">
+                <div class="courses-filter">
+                    <div class="courses-tabs" role="tablist" aria-label="Filtrar cursos">
+                        <button class="courses-tabs__btn courses-tabs__btn--active" role="tab" aria-selected="true" data-filter="all">Todos</button>
+                        <button class="courses-tabs__btn" role="tab" aria-selected="false" data-filter="long">Programas Largos</button>
+                        <button class="courses-tabs__btn" role="tab" aria-selected="false" data-filter="short">Cursos Cortos</button>
+                    </div>
+                </div>
+
+                <h2 id="courses-title" class="sr-only">Lista de cursos</h2>
+                <div class="courses-grid courses-grid--full" id="courses-grid">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="nav__logo" aria-label="Dental Academy - Inicio">
+                        <svg class="nav__logo-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                            <circle cx="18" cy="18" r="17" stroke="currentColor" stroke-width="2"/>
+                            <path d="M18 8c-3 0-5.5 2-5.5 5.5 0 3 2.5 5 3.5 9 .5 2 .5 4.5 2 4.5s1.5-2.5 2-4.5c1-4 3.5-6 3.5-9C23.5 10 21 8 18 8z" fill="currentColor"/>
+                        </svg>
+                        <span>Dental<span class="nav__logo-accent">Academy</span></span>
+                    </a>
+                    <p class="footer__brand-desc">Formación odontológica de excelencia.</p>
+                </div>
+                <div class="footer__links">
+                    <h3 class="footer__heading">Programas</h3>
+                    <ul class="footer__list">
+                        <li><a href="/courses">Cursos Largos</a></li>
+                        <li><a href="/courses">Cursos Cortos</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h3 class="footer__heading">Academia</h3>
+                    <ul class="footer__list">
+                        <li><a href="/#about">Nosotros</a></li>
+                        <li><a href="/contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h3 class="footer__heading">Contacto</h3>
+                    <ul class="footer__list">
+                        <li>info@dentalacademy.com</li>
+                        <li>+507 234-5678</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Dental Academy. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/courses.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

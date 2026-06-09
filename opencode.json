@@ -1,0 +1,73 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["AGENTS.md"],
+  "skills": {
+    "paths": [".opencode/skills"]
+  },
+  "agent": {
+    "code-reviewer": {
+      "description": "Reviews Python, JavaScript, and HTML code for quality, style violations, bugs, and anti-patterns. Read-only.",
+      "mode": "subagent",
+      "permission": {
+        "edit": "deny",
+        "bash": "ask"
+      }
+    },
+    "test-writer": {
+      "description": "Writes and runs pytest and JavaScript tests. Targets >80% coverage. Creates fixtures, unit tests, integration tests.",
+      "mode": "subagent",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow"
+      }
+    },
+    "devops": {
+      "description": "Handles CI/CD, Docker, deployment, environment management, and infrastructure. Uses deployment skill.",
+      "mode": "subagent",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow"
+      }
+    },
+    "ux-reviewer": {
+      "description": "Reviews HTML, CSS, and JavaScript for UX/UI quality, accessibility, design professionalism, and visual hierarchy. Read-only. Uses ui-ux-pro-max skill.",
+      "mode": "subagent",
+      "permission": {
+        "edit": "deny",
+        "bash": "ask"
+      }
+    },
+    "security-tester": {
+      "description": "Performs OWASP Top 10 security testing: injection, XSS, authentication, access control, security headers. Uses web-security-testing skill.",
+      "mode": "subagent",
+      "permission": {
+        "edit": "deny",
+        "bash": "allow"
+      }
+    },
+    "fastapi-backend": {
+      "description": "Builds FastAPI backends with async patterns, SQLAlchemy, Pydantic, authentication, and production API patterns. Uses python-fastapi-development skill.",
+      "mode": "subagent",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow"
+      }
+    }
+  },
+  "permission": {
+    "edit": "ask",
+    "bash": {
+      "git *": "allow",
+      "pytest *": "allow",
+      "ruff *": "allow",
+      "python *": "allow",
+      "npm *": "allow",
+      "docker *": "allow",
+      "*": "ask"
+    }
+  },
+  "compaction": {
+    "auto": true,
+    "tail_turns": 15
+  }
+}

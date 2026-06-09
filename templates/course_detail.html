@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ course.title }} — Dental Academy</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="/" class="nav__logo" aria-label="Dental Academy - Inicio">
+                <svg class="nav__logo-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                    <circle cx="18" cy="18" r="17" stroke="currentColor" stroke-width="2"/>
+                    <path d="M18 8c-3 0-5.5 2-5.5 5.5 0 3 2.5 5 3.5 9 .5 2 .5 4.5 2 4.5s1.5-2.5 2-4.5c1-4 3.5-6 3.5-9C23.5 10 21 8 18 8z" fill="currentColor"/>
+                </svg>
+                <span>Dental<span class="nav__logo-accent">Academy</span></span>
+            </a>
+            <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" id="nav-toggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="/" role="menuitem" class="nav__link">Inicio</a></li>
+                <li role="none"><a href="/courses" role="menuitem" class="nav__link nav__link--active">Cursos</a></li>
+                <li role="none"><a href="/#about" role="menuitem" class="nav__link">Nosotros</a></li>
+                <li role="none"><a href="/#instructors" role="menuitem" class="nav__link">Instructores</a></li>
+                <li role="none"><a href="/contact" role="menuitem" class="nav__link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="course-detail-hero">
+            <div class="container">
+                <a href="/courses" class="course-detail__back">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16 10H4m4-4l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Todos los Cursos
+                </a>
+                <div class="course-detail__header">
+                    <div class="course-detail__meta-top">
+                        <span class="course-card__category {% if course.category == 'short' %}course-card__category--accent{% endif %}">
+                            {% if course.category == 'long' %}Programa Largo{% else %}Curso Corto{% endif %}
+                        </span>
+                        <span class="course-detail__rating">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.5 4.5H13l-3.5 2.5 1.5 4.5L7 10l-3.5 2.5L5 8 1.5 5.5H5.5L7 1z"/></svg>
+                            {{ course.rating }}
+                        </span>
+                        <span class="course-detail__students">{{ course.students }} egresados</span>
+                    </div>
+                    <h1 class="course-detail__title">{{ course.title }}</h1>
+                    <p class="course-detail__subtitle">{{ course.subtitle }}</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-detail-body">
+            <div class="container">
+                <div class="course-detail__grid">
+                    <div class="course-detail__main">
+                        <div class="course-detail__section">
+                            <h2 class="course-detail__section-title">Descripción</h2>
+                            <p class="course-detail__text">{{ course.description }}</p>
+                        </div>
+
+                        <div class="course-detail__section">
+                            <h2 class="course-detail__section-title">Objetivos de Aprendizaje</h2>
+                            <ul class="course-detail__objectives">
+                                {% for obj in course.objectives %}
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="2"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    {{ obj }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                        <div class="course-detail__section">
+                            <h2 class="course-detail__section-title">Contenido del Programa</h2>
+                            <div class="course-detail__modules">
+                                {% for module in course.modules %}
+                                <div class="course-detail__module">
+                                    <div class="course-detail__module-header">
+                                        <span class="course-detail__module-num">Módulo {{ loop.index }}</span>
+                                        <h3 class="course-detail__module-name">{{ module.name }}</h3>
+                                    </div>
+                                    {% if module.weeks > 0 %}
+                                    <span class="course-detail__module-weeks">{{ module.weeks }} semanas</span>
+                                    {% endif %}
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="course-detail__sidebar">
+                        <div class="course-detail__card">
+                            <div class="course-detail__card-row">
+                                <span>Duración</span>
+                                <strong>{{ course.duration }}</strong>
+                            </div>
+                            <div class="course-detail__card-row">
+                                <span>Horas</span>
+                                <strong>{{ course.hours }} hrs</strong>
+                            </div>
+                            <div class="course-detail__card-row">
+                                <span>Modalidad</span>
+                                <strong>{{ course.modality }}</strong>
+                            </div>
+                            <div class="course-detail__card-row">
+                                <span>Cupos</span>
+                                <strong>{{ course.spots }} disponibles</strong>
+                            </div>
+                            <div class="course-detail__card-row">
+                                <span>Instructor</span>
+                                <strong>{{ course.instructor }}</strong>
+                            </div>
+                            <div class="course-detail__card-price">
+                                <span>Inversión</span>
+                                <strong>{{ course.price }}</strong>
+                            </div>
+                            <a href="/contact" class="btn btn--primary btn--lg btn--block">Inscribirme Ahora</a>
+                            <a href="/contact" class="btn btn--outline btn--block">Más Información</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom">
+                <p>&copy; 2026 Dental Academy. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
