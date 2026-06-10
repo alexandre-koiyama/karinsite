@@ -37,14 +37,11 @@
     <main id="main-content">
         <section class="hero" aria-labelledby="hero-title">
             <div class="hero__bg">
-                <video class="hero__video" autoplay muted loop playsinline poster aria-hidden="true">
-                    <source src="/static/video/hero-bg.mp4" type="video/mp4">
-                </video>
-                <div class="hero__video-overlay" aria-hidden="true"></div>
                 <div class="hero__gradient"></div>
                 <div class="hero__pattern" aria-hidden="true"></div>
             </div>
-            <div class="hero__content container">
+            <div class="hero__grid container">
+                <div class="hero__content">
                 <span class="hero__badge">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/></svg>
                     Inscripciones Abiertas 2026
@@ -73,6 +70,16 @@
                     <div class="hero__stat">
                         <span class="hero__stat-number" data-count="98">0</span><span class="hero__stat-suffix">%</span>
                         <span class="hero__stat-label">Satisfacción</span>
+                    </div>
+                </div>
+                </div>
+                <div class="hero__video-block">
+                    <div class="hero__video-card">
+                        <div class="hero__video-wrapper">
+                            <video class="hero__video-media" autoplay muted loop playsinline>
+                                <source src="/static/video/hero-bg.mp4" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
                 </div>
             </div>
