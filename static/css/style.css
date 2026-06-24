@@ -327,8 +327,8 @@ button {
     position: relative;
     min-height: min(100dvh, 900px);
     display: flex;
-    align-items: center;
-    padding: calc(var(--header-height) + var(--spacing-8)) 0 var(--spacing-16);
+    align-items: flex-start;
+    padding: calc(var(--header-height) + var(--spacing-6)) 0 var(--spacing-16);
     overflow: hidden;
 }
 
