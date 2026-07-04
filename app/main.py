@@ -53,6 +53,11 @@ async def course_detail(request: Request, course_id: str):
     return render("course_detail.html", {"request": request, "course": course, "course_id": course_id})
 
 
+@app.get("/about")
+async def about_page(request: Request):
+    return render("about.html", {"request": request})
+
+
 @app.get("/contact")
 async def contact_page(request: Request):
     return render("contact.html", {"request": request})
